@@ -1,4 +1,4 @@
-import React, {useContext, createContext, useState, useEffect} from "react";
+import React, {useContext, createContext, useState} from "react";
 import makeRequest from "../helpers/table-request";
 
 interface PropsValue {
@@ -20,7 +20,6 @@ const TableProvider = (props: PropsValue): JSX.Element => {
     const [tableData, setTableData] = useState([])
 
     const onLoadTable = (): void => {
-        console.log("yes, we a here, everything OK")
         makeRequest()
             .then((data)=>{
                 setTableData(data)

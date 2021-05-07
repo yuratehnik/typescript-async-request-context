@@ -6,7 +6,7 @@ const LoadDataButton = (): JSX.Element => {
 
     return (
         <>
-            <button onClick={loadInfo}>LoadSuperData</button>
+            <button onClick={loadInfo}>Load Posts</button>
         </>
     )
 }

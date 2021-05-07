@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {useTable} from "../../context/table-context";
 
 interface ITablePost {
@@ -13,8 +13,12 @@ const Table = (): JSX.Element => {
     const tableElements: JSX.Element | null = tableData ? tableData.map((item: ITablePost)=>{
             return(
                 <div key={item.id} className="item-wrapper">
-                    {item.title}<br/>
-                    {item.body}
+                    <h1>
+                        {item.title}
+                    </h1>
+                    <p>
+                        {item.body}
+                    </p>
                 </div>
             )
         })
